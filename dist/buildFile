@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<VASSAL.launch.BasicModule VassalVersion="3.2.16" description="Napoleonic Wars" name="Commands &amp; Colors Epic Napoleonics" nextPieceSlotId="1790" version="2.2">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<VASSAL.launch.BasicModule VassalVersion="3.3.0-svn9380" description="C&amp;C N Epic - re-modelling sandpit" name="Commands &amp; Colors Epic Napoleonics" nextPieceSlotId="1790" version="3-DO NOT USE">
     <VASSAL.build.module.BasicCommandEncoder/>
     <VASSAL.build.module.Documentation>
         <VASSAL.build.module.documentation.AboutScreen fileName="Splash.jpg" title="About Command&amp;Colors Napoleonics"/>
@@ -733,7 +733,7 @@
             <VASSAL.build.module.PredefinedSetup file="EP608 - Salamanca.vsav" isMenu="false" name="EP 608 - Salamanca - 22 July 1812" useFile="true"/>
             <VASSAL.build.module.PredefinedSetup file="EP609 - Sorauren.vsav" isMenu="false" name="EP 609 - Sorauren - 28 July 1813" useFile="true"/>
             <VASSAL.build.module.PredefinedSetup file="EP610 - Möckern.vsav" isMenu="false" name="EP 610 - Möckern - 16 October 1813" useFile="true"/>
-            <VASSAL.build.module.PredefinedSetup file="EP611 - Orthez.vsav" isMenu="false" name="EP 611 - Orthez - 27 February 1814" useFile="true"/>
+            <VASSAL.build.module.PredefinedSetup file="EP611 - Orthez - 27 February 1814.vsav" isMenu="false" name="EP 611 - Orthez - 27 February 1814" useFile="true"/>
             <VASSAL.build.module.PredefinedSetup file="EP612 - Laon.vsav" isMenu="false" name="EP 612 - Laon- 9-10 March 1814" useFile="true"/>
         </VASSAL.build.module.PredefinedSetup>
         <VASSAL.build.module.PredefinedSetup isMenu="true" name="La Grande Battles" useFile="true">
