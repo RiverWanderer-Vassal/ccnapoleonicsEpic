@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <data version="1">
-  <version>3-DO NOT USE</version>
-  <VassalVersion>3.3.0-svn9380</VassalVersion>
-  <dateSaved>1589366863182</dateSaved>
-  <description>C&amp;C N Epic - re-modelling sandpit</description>
+  <version>2.3-WIP</version>
+  <VassalVersion>3.2.17</VassalVersion>
+  <dateSaved>1589419217500</dateSaved>
+  <description>Napoleonic Wars</description>
   <name>Commands &amp; Colors Epic Napoleonics</name>
 </data>
