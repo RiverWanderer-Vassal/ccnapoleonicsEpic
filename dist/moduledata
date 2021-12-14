@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <data version="1">
-  <version>3.0.0a68</version>
+  <version>3.0.0a72</version>
   <VassalVersion>3.5.8</VassalVersion>
-  <dateSaved>1638545354798</dateSaved>
-  <description>C&amp;C Napoleonics: EPIC &amp; La Grande Battles. Vassal V3.5.5 or later required.</description>
+  <dateSaved>1639504736509</dateSaved>
+  <description>For EPIC &amp; La Grande Battles games. Vassal V3.6.2+ recommended. V3.5.8 OK but slower.</description>
   <name>Commands &amp; Colors Epic Napoleonics</name>
 </data>
