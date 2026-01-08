@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <data version="1">
-  <version>2.2</version>
-  <VassalVersion>3.2.16</VassalVersion>
-  <dateSaved>1477921952103</dateSaved>
-  <description>Napoleonic Wars</description>
+  <version>2.2.1</version>
+  <extra1/>
+  <extra2/>
+  <VassalVersion>3.7.19</VassalVersion>
+  <dateSaved>1767858885620</dateSaved>
+  <description>Epic &amp; Grand Battle scenarios</description>
   <name>Commands &amp; Colors Epic Napoleonics</name>
 </data>
