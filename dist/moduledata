@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <data version="1">
-  <version>3.0.0a72</version>
-  <VassalVersion>3.5.8</VassalVersion>
-  <dateSaved>1639504736509</dateSaved>
-  <description>For EPIC &amp; La Grande Battles games. Vassal V3.6.2+ recommended. V3.5.8 OK but slower.</description>
-  <name>Commands &amp; Colors Epic Napoleonics</name>
+  <version>3.xx</version>
+  <extra1>See Help...Release Notes for an introduction to the module</extra1>
+  <extra2>Module developer: Mark Benson with acknowledgement to previous and related modules. Core game images (c) GMT Games LLC.</extra2>
+  <VassalVersion>3.7.22</VassalVersion>
+  <dateSaved>1779804167020</dateSaved>
+  <description>Epic &amp; Grand Battles</description>
+  <name>Commands &amp; Colors Napoleonics Epic</name>
 </data>
