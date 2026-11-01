@@ -9,8 +9,7 @@ Core game images are © GMT Games LLC (module "About" text). The game's artwork,
 ## Module authors, by version
 | Version | Who | Source |
 |---|---|---|
-| 1.2, 2.2 | Bayernkini; also the Epic fan-scenarios extension (`extensions/Fansscenariosepic.vmdx`) | Vassal Module Library uploader |
-| Prior (standard) module | **Michel Dippel** | module About text: "by Mark Benson from prior module by Michel Dippel" |
+| 1.2, 2.2 | **Michel Dippel** (Bayernkini); also the Epic fan-scenarios extension (`extensions/Fansscenariosepic.vmdx`) | Vassal Module Library; module About text: "by Mark Benson from prior module by Michel Dippel" |
 | 2.2.1–2.3.x, 3.x (unreleased), 4.x | **Mark Benson** (marktb1961): module design & development | module About text; Vassal Module Library |
 | Project co-owner | Mark McGilchrist (Mark_McG) | Vassal Module Library; scenario designer (MM series) |
 
