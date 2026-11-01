@@ -8,3 +8,5 @@ Standalone module for the larger-format Epic and Grand Battle scenarios (Expansi
 * Build with `./mvnw package` (module written to `target/`).
 
 The standard-size module is in [ccnapoleonics](https://github.com/RiverWanderer-Vassal/ccnapoleonics).
+
+See [CREDITS.md](CREDITS.md) for authors, contributors, GMT Games' permission and the licence.
