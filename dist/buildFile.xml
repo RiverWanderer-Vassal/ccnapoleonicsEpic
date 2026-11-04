@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<VASSAL.build.GameModule ModuleOther1="&lt;br&gt;by Mark Benson from prior module by Michel Dippel&lt;br&gt;Core game images (c) GMT Games LLC." ModuleOther2="&lt;br&gt;See &lt;b&gt;Help &amp;gt; Module Hints &amp; Tips&lt;/b&gt; to get started " VassalVersion="3.7.30" description="Epic &amp; Grand Battles" name="Commands &amp; Colors: Napoleonics Epic &amp; Grand Battles" nextPieceSlotId="4608" version="4.0.6a17">
+<VASSAL.build.GameModule ModuleOther1="&lt;br&gt;by Mark Benson from prior module by Michel Dippel&lt;br&gt;Core game images (c) GMT Games LLC." ModuleOther2="&lt;br&gt;See &lt;b&gt;Help &amp;gt; Module Hints &amp; Tips&lt;/b&gt; to get started " VassalVersion="3.7.30" description="Epic &amp; Grand Battles" name="Commands &amp; Colors: Napoleonics Epic &amp; Grand Battles" nextPieceSlotId="4608" version="4.0.6a18">
     <VASSAL.build.module.BasicCommandEncoder/>
     <VASSAL.build.module.folder.ModuleSubFolder desc="Change entries by version; GitHub issues: github.com/RiverWanderer-Vassal/ccnapoleonicsEpic/issues" name="Change Log">
         <VASSAL.build.module.folder.ModuleSubFolder desc="" name="4.0.5">
@@ -59,6 +59,7 @@
             <VASSAL.build.module.folder.ModuleSubFolder desc="" name="a15 #16 Attack marker dropped back on its own hex is ignored (no re-opened attack or Bonus Combat); Bonus Combat only when the marker is moved from another hex onto the attacker"/>
             <VASSAL.build.module.folder.ModuleSubFolder desc="" name="a16 #16 Moving the Attack marker to another unit before the dice resets the previous attacker but keeps its Tactician mark (combat marker handling never clears Tactician marks)"/>
                 <VASSAL.build.module.folder.ModuleSubFolder desc="" name="a17 #19 Help &gt; Report an Issue opens the GitHub bug form with module, VASSAL, Java and OS versions, scenario and game state filled in; alpha/beta go to labels (were added to assignees)"/>
+            <VASSAL.build.module.folder.ModuleSubFolder desc="" name="a18 Terrain charts: Hill Line of Sight Diagrams tab added between Page 2 and Field Works Diagrams (Plateau and Same Hill, Artillery Firing Over); Field Works Diagrams unchanged"/>
         </VASSAL.build.module.folder.ModuleSubFolder>
     </VASSAL.build.module.folder.ModuleSubFolder>
     <VASSAL.build.module.Documentation>
@@ -1477,6 +1478,31 @@
                     <VASSAL.build.widget.WidgetMap allowMultiple="false" backgroundcolor="255,255,255" buttonName="Map" changeFormat="" color="0,0,0" createFormat="" edgeHeight="0" edgeWidth="0" hideKey="" hotkey="" icon="/images/map.gif" launch="false" mapName="TerrainPA2" markMoved="Never" markUnmovedHotkey="" markUnmovedIcon="" markUnmovedReport="" markUnmovedText="" markUnmovedTooltip="Mark all pieces on this map as not moved" moveKey="58115,0,moveChart" moveToFormat="" moveWithinFormat="" onlyReportChangedLocation="false" showKey="" thickness="3">
                         <VASSAL.build.module.map.BoardPicker addColumnText="Add column" addRowText="Add row" boardPrompt="Select board" slotHeight="125" slotScale="0.2" slotWidth="350" title="Choose Boards">
                             <VASSAL.build.module.map.boardPicker.Board image="TerrainPA_1.jpg" name="TerrainPA2" reversible="false"/>
+                        </VASSAL.build.module.map.BoardPicker>
+                        <VASSAL.build.module.map.StackMetrics bottom="40,0" disabled="false" down="37,0" exSepX="6" exSepY="18" top="38,0" unexSepX="2" unexSepY="4" up="39,0"/>
+                        <VASSAL.build.module.map.ForwardToKeyBuffer/>
+                        <VASSAL.build.module.map.Scroller/>
+                        <VASSAL.build.module.map.ForwardToChatter/>
+                        <VASSAL.build.module.map.MenuDisplayer/>
+                        <VASSAL.build.module.map.MapCenterer/>
+                        <VASSAL.build.module.map.StackExpander/>
+                        <VASSAL.build.module.map.PieceMover/>
+                        <VASSAL.build.module.map.KeyBufferer/>
+                        <VASSAL.build.module.map.ImageSaver buttonText="" canDisable="false" hideWhenDisabled="false" hotkey="" icon="/images/camera.gif" propertyGate="" tooltip="Save map as PNG image"/>
+                        <VASSAL.build.module.map.CounterDetailViewer bgColor="" borderColor="0,0,0" borderInnerThickness="2" borderThickness="2" borderWidth="0" centerAll="false" centerPiecesVertically="false" centerText="false" combineCounterSummary="false" counterReportFormat="" delay="700" description="" display="from top-most layer only" emptyHexReportForma="$LocationName$" enableHTML="false" extraTextPadding="0" fgColor="0,0,0" fontSize="9" graphicsZoom="1.0" hotkey="32,130" layerList="" minDisplayPieces="2" onlyShowFirstSummary="false" propertyFilter="" showDeck="false" showDeckDepth="1" showDeckMasked="false" showMoveSelectde="false" showNoStack="false" showNonMovable="false" showOnlyTopOfStack="false" showOverlap="false" showTerrainBeneath="never" showTerrainHeight="150" showTerrainSnappy="true" showTerrainText="$LocationName$" showTerrainWidth="150" showTerrainZoom="1.0" showgraph="true" showgraphsingle="false" showtext="false" showtextsingle="false" stopAfterShowing="false" stretchWidthPieces="false" stretchWidthSummary="false" summaryReportFormat="$LocationName$" unrotatePieces="false" version="4" verticalBottomText="10" verticalOffset="0" verticalTopText="5" zoomlevel="1.0"/>
+                        <VASSAL.build.module.map.Flare circleColor="255,0,0" circleScale="true" circleSize="100" flareKey="keyAlt" flareName="Map Flare" flarePulses="6" flarePulsesPerSec="3" reportFormat=""/>
+                        <VASSAL.build.module.map.Zoomer inButtonText="" inIconName="/images/zoomIn.gif" inTooltip="Zoom in" outButtonText="" outIconName="/images/zoomOut.gif" outTooltip="Zoom out" pickButtonText="" pickIconName="/images/zoom.png" pickTooltip="Select Zoom" zoomInKey="" zoomLevels="0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0,1.1,1.2,1.3" zoomOutKey="" zoomPickKey="" zoomStart="6"/>
+                        <VASSAL.build.module.properties.GlobalProperties>
+                            <VASSAL.build.module.properties.GlobalProperty description="" initialValue="false" isNumeric="false" max="null" min="null" name="allowCards" wrap="false"/>
+                        </VASSAL.build.module.properties.GlobalProperties>
+                        <VASSAL.build.module.map.SelectionHighlighters/>
+                        <VASSAL.build.module.map.HighlightLastMoved color="255,0,0" enabled="true" thickness="2"/>
+                    </VASSAL.build.widget.WidgetMap>
+                </VASSAL.build.widget.MapWidget>
+                <VASSAL.build.widget.MapWidget entryName="Hill Line of Sight Diagrams">
+                    <VASSAL.build.widget.WidgetMap allowMultiple="false" backgroundcolor="255,255,255" buttonName="Map" changeFormat="" color="0,0,0" createFormat="" edgeHeight="0" edgeWidth="0" hideKey="" hotkey="" icon="/images/map.gif" launch="false" mapName="HillLoSPA" markMoved="Never" markUnmovedHotkey="" markUnmovedIcon="" markUnmovedReport="" markUnmovedText="" markUnmovedTooltip="Mark all pieces on this map as not moved" moveKey="58115,0,moveChart" moveToFormat="" moveWithinFormat="" onlyReportChangedLocation="false" showKey="" thickness="3">
+                        <VASSAL.build.module.map.BoardPicker addColumnText="Add column" addRowText="Add row" boardPrompt="Select board" slotHeight="125" slotScale="0.2" slotWidth="350" title="Choose Boards">
+                            <VASSAL.build.module.map.boardPicker.Board image="HillLoSPA.jpg" name="HillLoSPA" reversible="false"/>
                         </VASSAL.build.module.map.BoardPicker>
                         <VASSAL.build.module.map.StackMetrics bottom="40,0" disabled="false" down="37,0" exSepX="6" exSepY="18" top="38,0" unexSepX="2" unexSepY="4" up="39,0"/>
                         <VASSAL.build.module.map.ForwardToKeyBuffer/>
