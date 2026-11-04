@@ -59,7 +59,7 @@
             <VASSAL.build.module.folder.ModuleSubFolder desc="" name="a15 #16 Attack marker dropped back on its own hex is ignored (no re-opened attack or Bonus Combat); Bonus Combat only when the marker is moved from another hex onto the attacker"/>
             <VASSAL.build.module.folder.ModuleSubFolder desc="" name="a16 #16 Moving the Attack marker to another unit before the dice resets the previous attacker but keeps its Tactician mark (combat marker handling never clears Tactician marks)"/>
                 <VASSAL.build.module.folder.ModuleSubFolder desc="" name="a17 #19 Help &gt; Report an Issue opens the GitHub bug form with module, VASSAL, Java and OS versions, scenario and game state filled in; alpha/beta go to labels (were added to assignees)"/>
-            <VASSAL.build.module.folder.ModuleSubFolder desc="" name="a18 Terrain charts: Hill Line of Sight Diagrams tab added between Page 2 and Field Works Diagrams (Plateau and Same Hill, Artillery Firing Over); Field Works Diagrams unchanged"/>
+            <VASSAL.build.module.folder.ModuleSubFolder desc="" name="a18 #22 Terrain charts: Hill Line of Sight Diagrams tab added between Page 2 and Field Works Diagrams (Plateau and Same Hill, Artillery Firing Over); Field Works Diagrams unchanged"/>
         </VASSAL.build.module.folder.ModuleSubFolder>
     </VASSAL.build.module.folder.ModuleSubFolder>
     <VASSAL.build.module.Documentation>
