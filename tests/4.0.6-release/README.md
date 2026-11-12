@@ -37,3 +37,6 @@ Every image name in the buildFile (piece traits, boards, charts, HTML) was liste
 2. Player Aids: the national cards, Combat Tables and Spanish & Portuguese tab are the 4.0.5 versions. Terrain has four tabs, and Special Rules has the new community charts.
 3. A Russian scenario with the Suvorov variant: Russian page 1 gets the 4.0.5 Suvorov overlay, with no error.
 4. Prussian leaders Blücher, Bülow and Röder show their portraits.
+
+## XML check
+Before every build, run `python3 -c "import xml.dom.minidom; xml.dom.minidom.parse('dist/buildFile.xml')"`. Change log text must not contain plain double quotes.
