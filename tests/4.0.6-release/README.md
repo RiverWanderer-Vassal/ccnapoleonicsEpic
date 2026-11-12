@@ -29,6 +29,9 @@
   - After lock, a change to Updated is reverted to Original.
   - Suvorov after lock stays false.
 
+## Refresh restores the variant flags (#35)
+`isSpanishLateWarVar` is now restored on Refresh from `setupSpanishLateWarVar`; before, it was copied from the Suvorov option. `tools/harness/LWTest.java` sets each combination of the two options, fires `VassalPostRefreshGHK`, and checks both flags follow their own option: all four combinations pass.
+
 ## Self-contained check
 Every image name in the buildFile (piece traits, boards, charts, HTML) was listed and checked against `dist/images`. Only VASSAL's own icons and a few parsing artefacts are not found, and the same list comes up for 4.0.5 and a19. Nothing new is missing.
 
