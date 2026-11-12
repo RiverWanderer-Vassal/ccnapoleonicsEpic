@@ -2,9 +2,9 @@
 
 **4.0.6 = 4.0.6a19 without the 2026 Army Reference Cards, Combat Tables and Terrain Tile Effects Chart, which are deferred to 4.0.7 (#32).**
 - Held back until 4.0.7: the a03 national reference cards (French, British, Russian, Austrian, Prussian, Spanish, Spanish Late War, Suvorov) and the Combat Tables; the Spanish/Portuguese split (Portuguese card); the Suvorov page 2 overlay (`Alternate Russian Chart 2` slot, `Set Up Variants` back to 4.0.5); and the a04, a12 and a13 card edits, and the a04 Terrain Tile Effects Chart update. These charts show their 2023 (4.0.5) versions, with corrections:
-  - Terrain p1, Sand Quarry: Inf Into 0/-1 (was -1/0), Inf Out 0 (was -1), Arty Into -1 (was -1/0).
+  - Terrain p1, Sand Quarry: Inf Into 0/-1³ (was -1/0⁷), Inf Out 0 (was -1), Arty Into -1 (was -1/0).
   - Terrain p2, Marsh: Must Stop with note 8, Out Arty NA (was -1).
-  - Terrain notes, both pages: note 7 now reads "Fordable River, Marsh and Frozen Lake" (Sand Quarry removed); note 8 reads "Marsh and Sand Quarry are impassable for artillery."
+  - Terrain notes, both pages: note 3 now reads "Hill to Hill and Sand Quarry have no effect on melee only Ranged fire is effected." (the 2023 convention: -1/0 goes with note 7, 0/-1 with note 3); note 7 now reads "Fordable River, Marsh and Frozen Lake" (Sand Quarry removed); note 8 reads "Marsh and Sand Quarry are impassable for artillery."
   - Russian (and Suvorov) Light Infantry movement 1 / 2 NB.
   - Russian Heavy Cuirassier Cavalry is (CU), not (CC).
   - British Rocket Artillery movement 1-2 NB.
