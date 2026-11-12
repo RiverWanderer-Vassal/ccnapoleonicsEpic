@@ -12,7 +12,8 @@
   - French Heavy Cuirassier notes: "Roll 1 additional die in melee combat." added (the Melee column already showed it).
   - Prussian Militia Lancer melee: stray asterisk removed.
   - Combat Tables: Note 3 "...one hit from Infantry ranged combat."; Note 5 "Rifle Light, Grenzer and all militia units...".
-  - Every corrected chart has a red footer line: "Corrected copy for the CCN VASSAL module (Epic 4.0.6): differs from the published GMT chart. See the module change log."
+  - Each corrected page has "Errata corrected November 2026" in small italics, right-justified on the GMT footer line (French page 2 has no GMT footer, so the note sits at the same height). Unchanged pages have no mark.
+  - All chart and overlay images keep their file names, so games in progress and set-ups show the corrected images without a Refresh. That includes the Suvorov overlay (RussianPA-SV.jpeg), and the Spanish Late War overlay, which is unchanged from 2023.
   The edits reuse glyphs cut from the same scans, so the type matches.
 - Everything else from a19 is in: the community Special Rules charts (a05-a11), the Hill Line of Sight and Field Works Diagrams tabs, and fixes #12, #13, #14, #16, #17, #19, #23 and #29.
 - The five accented leader portraits (Blücher, Bülow, Röder, Württemberg, Dupont de l'Étang) are stored under the precomposed names the buildFile uses.
