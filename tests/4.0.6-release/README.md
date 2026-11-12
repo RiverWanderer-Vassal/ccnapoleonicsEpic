@@ -1,8 +1,15 @@
 # 4.0.6 release checks
 
-**4.0.6 = 4.0.6a19 without the 2026 Army Reference Cards and Combat Tables, which are deferred to 4.0.7 (#32).**
-- Held back until 4.0.7: the a03 national reference cards (French, British, Russian, Austrian, Prussian, Spanish, Spanish Late War, Suvorov) and the Combat Tables; the Spanish/Portuguese split (Portuguese card); the Suvorov page 2 overlay (`Alternate Russian Chart 2` slot, `Set Up Variants` back to 4.0.5); and the a04, a12 and a13 card edits. These charts show their 4.0.5 versions.
-- Everything else from a19 is in: the community Special Rules charts (a05-a11), the 2026 Terrain chart, the Hill Line of Sight and Field Works Diagrams tabs, and fixes #12, #13, #14, #16, #17, #19, #23 and #29.
+**4.0.6 = 4.0.6a19 without the 2026 Army Reference Cards, Combat Tables and Terrain Tile Effects Chart, which are deferred to 4.0.7 (#32).**
+- Held back until 4.0.7: the a03 national reference cards (French, British, Russian, Austrian, Prussian, Spanish, Spanish Late War, Suvorov) and the Combat Tables; the Spanish/Portuguese split (Portuguese card); the Suvorov page 2 overlay (`Alternate Russian Chart 2` slot, `Set Up Variants` back to 4.0.5); and the a04, a12 and a13 card edits, and the a04 Terrain Tile Effects Chart update. These charts show their 2023 (4.0.5) versions, with corrections:
+  - Terrain p1, Sand Quarry: Inf Into 0/-1 (was -1/0), Inf Out 0 (was -1), Arty Into -1 (was -1/0).
+  - Terrain p2, Marsh: Must Stop with note 8, Out Arty NA (was -1).
+  - Terrain notes, both pages: note 7 now reads "Fordable River, Marsh and Frozen Lake" (Sand Quarry removed); note 8 reads "Marsh and Sand Quarry are impassable for artillery."
+  - Russian (and Suvorov) Light Infantry movement 1 / 2 NB.
+  - Russian Heavy Cuirassier Cavalry is (CU), not (CC).
+  - British Rocket Artillery movement 1-2 NB.
+  The edits reuse glyphs cut from the same scans, so the type matches.
+- Everything else from a19 is in: the community Special Rules charts (a05-a11), the Hill Line of Sight and Field Works Diagrams tabs, and fixes #12, #13, #14, #16, #17, #19, #23 and #29.
 - The five accented leader portraits (Blücher, Bülow, Röder, Württemberg, Dupont de l'Étang) are stored under the precomposed names the buildFile uses.
 
 ## Self-contained check
