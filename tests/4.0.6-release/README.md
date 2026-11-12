@@ -18,9 +18,16 @@
 - Everything else from a19 is in: the community Special Rules charts (a05-a11), the Hill Line of Sight and Field Works Diagrams tabs, and fixes #12, #13, #14, #16, #17, #19, #23 and #29.
 - The five accented leader portraits (Blücher, Bülow, Röder, Württemberg, Dupont de l'Étang) are stored under the precomposed names the buildFile uses.
 
-## Sand Quarry (CCN 4th Edition)
-The Terrain palette's Sand Quarry tile (gpid 114) now uses the `Quarry4thEd` prototype: Inf into 0 melee / -1 ranged, out 0; Arty into -1, out not allowed; Cav -2 into and out. This matches the corrected Terrain chart. The original-rules tile (`Quarry`, Inf -1 into and out) is now the hidden alternative (gpid 4603), still offered from the tile menu before game start.
-Only the three Waterloo set-ups use Sand Quarry: GBWaterloo, GG03 EPIC Waterloo and MD14 Waterloo. They were refreshed on this build; their quarry is now 4th Edition, and every piece position is unchanged. Games in progress keep their old quarry until they are refreshed.
+## Sand Quarry option (#33)
+- **The option:** Scenario Options > Variants > Sand Quarry, either **Updated (4th Edition)** (the default) or **Original (2016)**. It is set before game start, like the Spanish Late War variant.
+- **The tiles:** the option switches every Sand Quarry tile on the main map. Updated uses `Quarry4thEd`: Inf 0 melee / -1 ranged into, 0 out; Arty -1 into, may not leave; Cav -2. Original uses `Quarry`: Inf -1 into and out. A tile placed later adopts the setting when it is dropped (`mapMove`). The tiles no longer have a public rules menu.
+- **The chart:** Original overlays Terrain page 1 with `TerrainPA-SQ2016.jpg`, which carries © 2016 and "Errata corrected November 2026 / except Sand Quarry". The overlay is placed through the Game Setup helper, like the Suvorov chart. The corrected Terrain pages carry © 2023.
+- **The lock:** once the game is locked, a change is reverted to the saved setting (`gSandQuarry`). That required fixing the generic resetOption, which had restored locked options blank (#34). Suvorov is now restored correctly too.
+- **Headless test** (`SQTest`, on GBWaterloo after Refresh):
+  - Updated to Original to Updated: the tile and the chart switch each time.
+  - A new palette tile adopts Original.
+  - After lock, a change to Updated is reverted to Original.
+  - Suvorov after lock stays false.
 
 ## Self-contained check
 Every image name in the buildFile (piece traits, boards, charts, HTML) was listed and checked against `dist/images`. Only VASSAL's own icons and a few parsing artefacts are not found, and the same list comes up for 4.0.5 and a19. Nothing new is missing.
