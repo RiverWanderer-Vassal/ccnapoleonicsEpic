@@ -18,6 +18,10 @@
 - Everything else from a19 is in: the community Special Rules charts (a05-a11), the Hill Line of Sight and Field Works Diagrams tabs, and fixes #12, #13, #14, #16, #17, #19, #23 and #29.
 - The five accented leader portraits (Blücher, Bülow, Röder, Württemberg, Dupont de l'Étang) are stored under the precomposed names the buildFile uses.
 
+## Sand Quarry (CCN 4th Edition)
+The Terrain palette's Sand Quarry tile (gpid 114) now uses the `Quarry4thEd` prototype: Inf into 0 melee / -1 ranged, out 0; Arty into -1, out not allowed; Cav -2 into and out. This matches the corrected Terrain chart. The original-rules tile (`Quarry`, Inf -1 into and out) is now the hidden alternative (gpid 4603), still offered from the tile menu before game start.
+Only the three Waterloo set-ups use Sand Quarry: GBWaterloo, GG03 EPIC Waterloo and MD14 Waterloo. They were refreshed on this build; their quarry is now 4th Edition, and every piece position is unchanged. Games in progress keep their old quarry until they are refreshed.
+
 ## Self-contained check
 Every image name in the buildFile (piece traits, boards, charts, HTML) was listed and checked against `dist/images`. Only VASSAL's own icons and a few parsing artefacts are not found, and the same list comes up for 4.0.5 and a19. Nothing new is missing.
 
