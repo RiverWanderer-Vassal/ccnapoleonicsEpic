@@ -24,4 +24,3 @@ jobs:
           4.0.4 9/0
           4.0.5 6/6
           LIST
-          gh release edit v4.0.5 --latest
