@@ -1,42 +1,36 @@
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 D='/home/claude/ccnapoleonicsepic/dist/images/'
 L=lambda f: Image.open(D+f).convert('RGBA')
-hexi=L('Tile_Clear.png'); blk=L('fre_FA.png'); s3=L('str3.png')
+S=4
+def at(c,im,cx,cy,dx=0,dy=0):
+    im=im.resize((im.width*S,im.height*S),Image.LANCZOS)
+    c.alpha_composite(im,(int((cx+dx)*S-im.width/2),int((cy+dy)*S-im.height/2)))
+hexi=L('Tile_Clear.png'); blk=L('fre_FA.png'); fa=L('unit_FA.png'); s3=L('str3.png')
 atk=L('marker_attacker_CCN25x25.png'); add=L('marker_attackerART.png')
-S=3  # supersample
-W,H=172,100
-c=Image.new('RGBA',(W*S,H*S),(255,255,255,0))
-hx=hexi.resize((86*S,100*S),Image.LANCZOS)
-outline=Image.new('RGBA',hx.size,(0,0,0,0))
-for i,x in enumerate((0,86)):
-    c.alpha_composite(hx,(x*S,0))
-# hex outlines
-d=ImageDraw.Draw(c)
-for x in (0,86):
-    pts=[(x+43,0),(x+86,25),(x+86,75),(x+43,100),(x,75),(x,25)]
-    d.line([(px*S,min(py*S,H*S-1)) for px,py in pts+[pts[0]]],fill=(110,130,80,255),width=S)
-b=blk.resize((60*S,int(55*60/69)*S),Image.LANCZOS); bw,bh=b.size
-sh=Image.new('RGBA',(bw+8*S,bh+8*S),(0,0,0,0)); ImageDraw.Draw(sh).rectangle([4*S,4*S,bw+4*S,bh+4*S],fill=(0,0,0,110)); sh=sh.filter(ImageFilter.GaussianBlur(2*S))
-st=s3.resize((s3.width*S,s3.height*S),Image.LANCZOS)
-for x,m in ((0,atk),(86,add)):
-    bx=(x+43)*S-bw//2; by=50*S-bh//2+3*S
-    c.alpha_composite(sh,(bx-2*S,by-2*S)); c.alpha_composite(b,(bx,by))
-    mk=m.resize((22*S,22*S),Image.LANCZOS)
-    c.alpha_composite(mk,(bx-7*S,by-12*S))
-c=c.resize((W,H),Image.LANCZOS)
-c.save('gb_hexes.png')
-# patch into chart
-ch=Image.open(D+'SpecialRules2.jpg').convert('RGB')
-x0,y0,x1,y1=66,786,258,995
-ch.paste((255,255,255),(x0,y0,x1,990))
-sc=186/172; g=c.resize((186,round(100*sc)),Image.LANCZOS)
-gx=69; gy=800
-ch.paste(g,(gx,gy),g)
+H1=(43,50); H2=(86,125)   # pointy-top hexes, diagonal neighbours
+W,Hh=129,175
+c=Image.new('RGBA',(W*S,Hh*S),(0,0,0,0)); d=ImageDraw.Draw(c)
+for cx,cy in (H1,H2):
+    at(c,hexi,cx,cy)
+for cx,cy in (H1,H2):
+    pts=[(cx,cy-50),(cx+43,cy-25),(cx+43,cy+25),(cx,cy+50),(cx-43,cy+25),(cx-43,cy-25)]
+    d.line([(min(x*S,W*S-1),min(y*S,Hh*S-1)) for x,y in pts+[pts[0]]],fill=(110,130,80,255),width=S)
+for (cx,cy),m in ((H1,atk),(H2,add)):
+    sh=Image.new('RGBA',((69+10)*S,(55+10)*S),(0,0,0,0)); ImageDraw.Draw(sh).rectangle([5*S,5*S,74*S,60*S],fill=(0,0,0,100)); sh=sh.filter(ImageFilter.GaussianBlur(2*S))
+    c.alpha_composite(sh,(int((cx+2)*S-sh.width/2),int((cy+2)*S-sh.height/2)))
+    at(c,blk,cx,cy); at(c,fa,cx,cy,0,-22); at(c,s3,cx,cy,22,20); at(c,m,cx,cy)
+c=c.resize((W,Hh),Image.LANCZOS); c.save('gb_hexes2.png')
+ch=Image.open('SpecialRules2_orig.jpg').convert('RGB') if False else Image.open(D+'SpecialRules2.jpg').convert('RGB')
+ch.paste((255,255,255),(62,786,262,992))
+gx,gy=72,800
+ch.paste(c,(gx,gy),c)
 dr=ImageDraw.Draw(ch)
 f=ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSerifCondensed.ttf',12)
 fi=ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSerifCondensed-Italic.ttf',11)
-for cx,t in ((gx+46,'Attack'),(gx+139,'Add Artillery')):
-    w=dr.textlength(t,font=f); dr.text((cx-w/2,gy+g.height+4),t,font=f,fill=(40,40,40))
-t='French Foot Artillery'; w=dr.textlength(t,font=fi); dr.text((gx+93-w/2,gy+g.height+20),t,font=fi,fill=(90,90,90))
-ch.save('SpecialRules2.jpg',quality=92)
-ch.crop((40,720,1240,1010)).save('preview.png')
+dr.text((gx+92,gy+42),'Attack',font=f,fill=(40,40,40))
+for i,t in enumerate(('Add','Artillery')):
+    w=dr.textlength(t,font=f); dr.text((gx+40-w,gy+118+i*15),t,font=f,fill=(40,40,40))
+for i,t in enumerate(('French','Foot Artillery')):
+    dr.text((gx+133,gy+150+i*13) if False else (gx+92,gy+8+i*13),t,font=fi,fill=(110,110,110)) if False else None
+ch.save('SpecialRules2_v2.jpg',quality=92)
+ch.crop((40,720,1240,1010)).save('preview2.png')
