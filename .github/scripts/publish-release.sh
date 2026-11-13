@@ -13,7 +13,7 @@ ver_in=$(unzip -p "$vmod" moduledata | sed -n 's:.*<version>\(.*\)</version>.*:\
 echo "Downloaded $url: version $ver_in, checksum $ck"
 [ "$ver_in" = "$ver" ] || { echo "::error::file reports version $ver_in, expected $ver"; exit 1; }
 grep -q "checksum \*\*$ck\*\*" "$notes" || { echo "::error::checksum $ck is not the one in $notes"; exit 1; }
-title="Epic & Grand Battles $ver"
+title="CCN Epic & Grand Battles $ver"
 if gh release view "$tag" >/dev/null 2>&1; then
   gh release edit "$tag" --title "$title" --notes-file "$notes"
   gh release upload "$tag" "$vmod#CCNapoEpic4.vmod ($ver)" --clobber

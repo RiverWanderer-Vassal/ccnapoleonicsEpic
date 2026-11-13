@@ -1,0 +1,18 @@
+name: Retitle releases
+# Adds the "CCN " prefix to release titles that start with "Epic & Grand Battles".
+# Changes titles only: notes, files, tags and the Latest flag are left as they are.
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  retitle:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Retitle
+        env: { GH_TOKEN: "${{ github.token }}", GH_REPO: "${{ github.repository }}" }
+        run: |
+          gh release list --limit 100 --json tagName,name --jq '.[] | select(.name | startswith("Epic & Grand Battles")) | "\(.tagName)\t\(.name)"' |
+          while IFS=$'\t' read -r tag name; do
+            echo "$tag: $name -> CCN $name"
+            gh release edit "$tag" --title "CCN $name"
+          done
