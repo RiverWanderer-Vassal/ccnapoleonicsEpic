@@ -6,7 +6,13 @@ SZ=18.5
 F={k:ImageFont.truetype(FD+f,SZ) for k,f in dict(r='bchr8a.pfb',b='bchb8a.pfb',i='bchri8a.pfb',bi='bchbi8a.pfb').items()}
 H={k:ImageFont.truetype(FD+f,23) for k,f in dict(b='bchb8a.pfb',bi='bchbi8a.pfb').items()}
 COL=(45,45,45); TAG=(150,40,30); LH=24.5
-src=Image.open(P).convert('RGB'); A=np.array(src)
+src=Image.open(P).convert('RGB')
+_d=ImageDraw.Draw(src); _d.rectangle((88,343,1205,374),fill=(255,255,255))
+B21={k:ImageFont.truetype(FD+f,21) for k,f in dict(r='bchr8a.pfb',b='bchb8a.pfb').items()}
+_x=92
+for _t,_st in (('Only a French ','r'),('Command card','b'),(' can be stopped. Only one counter per French turn.','r')):
+    _d.text((_x,348-6),_t,font=B21[_st],fill=(40,40,40)); _x+=B21[_st].getlength(_t)
+A=np.array(src)
 badge=src.crop((672,388,764,411))
 BUL=[
  [('Starting counters','b'),('are assigned to battlefield sections, by the CIC or divided between the players commanding sections. A section with fewer than','r'),('four Spanish units','b'),('cannot be given a counter.','r')],
