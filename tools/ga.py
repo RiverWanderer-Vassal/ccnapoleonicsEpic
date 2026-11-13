@@ -1,6 +1,6 @@
 from PIL import Image,ImageDraw,ImageFont
 import numpy as np
-P='/home/claude/ccnapoleonicsepic/dist/images/SpecialRules.jpg'
+P='/tmp/SR_preGA.jpg'
 FD='/usr/share/fonts/type1/texlive-fonts-recommended/'
 SZ=18.5
 F={k:ImageFont.truetype(FD+f,SZ) for k,f in dict(r='bchr8a.pfb',b='bchb8a.pfb',i='bchri8a.pfb',bi='bchbi8a.pfb').items()}
@@ -10,7 +10,7 @@ src=Image.open(P).convert('RGB'); A=np.array(src)
 badge=src.crop((672,388,764,411))
 BUL=[
  [('Starting counters','b'),('are assigned to battlefield sections, by the CIC or divided between the players commanding sections. A section with fewer than','r'),('four Spanish units','b'),('cannot be given a counter.','r')],
- [('Gaining','b'),('a counter: when a','r'),('Scout','i'),('card is played, one counter is gained at the end of the turn in the section the','r'),('Scout','i'),('was played in, provided that the CIC draws','r'),('one','b'),('Command card instead of two (the','r'),('Scout','i'),('player still gains his Tactician card), the 3 Corps Command Stars were not used (no March Move, no Tactician draw), and the section has','r'),('at least four Spanish units','b'),('.','r')],
+ [('Gaining','b'),('a counter','r'),('(one per turn)','b'),(': when a','r'),('Scout','i'),('card is played, one counter is gained at the end of the turn in the section the','r'),('Scout','i'),('was played in, provided that the CIC draws','r'),('one','b'),('Command card instead of two (the','r'),('Scout','i'),('player still gains his Tactician card), no Corps Command Stars were used on','r'),('any','b'),('card played that turn (no March Move, no Tactician draw), and the section has','r'),('at least four Spanish units','b'),('.','r')],
  [('A counter held in a section may only target a Command card played in that','r'),('same section','b'),('. A','r'),('Take Command','i'),('card counts as played in the section it is played into, even when the units it orders extend into another section.','r')],
  [('Multi-Section cards and Initiative Rolls cannot be stopped.','r')],
 ]
