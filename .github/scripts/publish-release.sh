@@ -18,5 +18,7 @@ if gh release view "$tag" >/dev/null 2>&1; then
   gh release edit "$tag" --title "$title" --notes-file "$notes"
   gh release upload "$tag" "$vmod#CCNapoEpic4.vmod ($ver)" --clobber
 else
-  gh release create "$tag" "$vmod#CCNapoEpic4.vmod ($ver)" --title "$title" --notes-file "$notes" --target "$target" --latest=false
+  # An existing tag is used as it is; --target is only for creating a new tag.
+  if git rev-parse -q --verify "refs/tags/$tag" >/dev/null; then tgt=(); else tgt=(--target "$(git rev-parse "$target")"); fi
+  gh release create "$tag" "$vmod#CCNapoEpic4.vmod ($ver)" --title "$title" --notes-file "$notes" "${tgt[@]}" --latest=false
 fi
