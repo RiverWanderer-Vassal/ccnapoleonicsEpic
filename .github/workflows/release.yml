@@ -1,0 +1,27 @@
+name: Publish release
+# Run from the Actions tab after uploading the module to the VASSAL Module Library.
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Module version, e.g. 4.0.7 (release-notes/<version>.md must exist)"
+        required: true
+      vassal_url:
+        description: "Download link of the module file on the VASSAL Module Library (obj.vassalengine.org/...)"
+        required: true
+      target:
+        description: "Commit or branch to tag (default: main)"
+        default: main
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - name: Publish
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: |
+          .github/scripts/publish-release.sh "${{ inputs.version }}" "${{ inputs.vassal_url }}" "${{ inputs.target }}"
+          gh release edit "v${{ inputs.version }}" --latest
