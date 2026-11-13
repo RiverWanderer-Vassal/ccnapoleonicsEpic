@@ -16,8 +16,8 @@ A=np.array(src)
 badge=src.crop((672,388,764,411))
 BUL=[
  [('Starting counters','b'),('are assigned to battlefield sections, by the CIC or divided between the players commanding sections. A section with fewer than','r'),('four Spanish units','b'),('cannot be given a counter.','r')],
- [('Gaining','b'),('a counter','r'),('(one per turn)','b'),(': when a','r'),('Scout','i'),('card is played, one counter is gained at the end of the turn in the section the','r'),('Scout','i'),('was played in, provided that the CIC draws','r'),('one','b'),('Command card instead of two (the','r'),('Scout','i'),('player still gains his Tactician card), no Corps Command Stars were used on','r'),('any','b'),('card played that turn (no March Move, no Tactician draw), and the section has','r'),('at least four Spanish units','b'),('.','r')],
- [('A counter held in a section may only target a Command card played in that','r'),('same section','b'),('. A','r'),('Take Command','i'),('card counts as played in the section it is played into, even when the units it orders extend into another section.','r')],
+ [('Gaining','b'),('a counter','r'),('(one per turn)','b'),(': when a','r'),('Scout','i'),('card is played, one counter is gained at the end of the turn in the section the','r'),('Scout','i'),('was played in, provided that the CIC draws only','r'),('one','b'),('Command card, however many','r'),('Scout','i'),('cards were played (the','r'),('Scout','i'),('player still gains his Tactician card), none of the Corps Command Stars of','r'),('any','b'),('Scout','i'),('card played that turn were used (no March Move, no Tactician draw), and the section has','r'),('at least four Spanish units','b'),('.','r')],
+ [('A counter held in a section may only target a Command card played in that','r'),('same section','b'),('(in Grand Battles, a Corps Commander\u2019s counters cover the sections he commands). A','r'),('Take Command','i'),('card counts as played in the section it is played into, even when the units it orders extend into another section.','r')],
  [('Multi-Section cards and Initiative Rolls cannot be stopped.','r')],
 ]
 GB2=[('Grand Battles (2nd edition):','bi'),('each Corps Commander holds the counters listed in the Battle Notes. A counter may only target a Command card his opponent plays in the','r'),('sections he commands','b'),(', and a','r'),('Scout','i'),('card gains a counter only if those sections have at least four Spanish units.','r')]
@@ -33,13 +33,13 @@ def layout(segs,x0,maxx):
     return lines
 blocks=[layout(b,93,1196) for b in BUL]; gb2=layout(GB2,69,1196)
 TOP=383; y=389-6+2
-h=int(6+32+sum(len(b)*LH+2 for b in blocks)+10+len(gb2)*LH+8)
+h=int(6+32+sum(len(b)*LH+2 for b in blocks)+8)
 # blank strip from a white box row (y=545) repeated
 blank=np.repeat(A[545:546],h,axis=0)
 blk=Image.fromarray(blank.copy()); d=ImageDraw.Draw(blk)
 # heading
 x=69; hy=3
-for t,st in (('EPIC & Grand Battles (1st edition) clarifications (90-card ','b'),('GMT','bi'),(' deck)','b')):
+for t,st in (('EPIC & Grand Battles clarifications (90-card ','b'),('GMT','bi'),(' deck)','b')):
     d.text((x,hy),t,font=H[st],fill=(25,25,25)); x+=H[st].getlength(t)
 blk.paste(badge,(int(x+14),hy+5))
 cy=38
@@ -48,9 +48,6 @@ for b in blocks:
     for k,ln in enumerate(b):
         for x,w,st in ln: d.text((x,cy+k*LH-5),w,font=F[st],fill=TAG if st=='bi' else COL)
     cy+=len(b)*LH+2
-cy+=10
-for k,ln in enumerate(gb2):
-    for x,w,st in ln: d.text((x,cy+k*LH-5),w,font=F[st],fill=TAG if st=='bi' else COL)
 B=np.concatenate([A[:TOP],np.array(blk),A[545:]])
 im=Image.fromarray(B); im.save('SpecialRules_ga.jpg',quality=93)
 im.crop((40,90,1240,TOP+h+30)).save('ga_prev.png'); print(im.size,h)
