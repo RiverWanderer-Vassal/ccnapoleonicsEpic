@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<VASSAL.build.GameModule ModuleOther1="&lt;br&gt;by Mark Benson from prior module by Michel Dippel&lt;br&gt;Core game images (c) GMT Games LLC." ModuleOther2="&lt;br&gt;See &lt;b&gt;Help &amp;gt; Module Hints &amp; Tips&lt;/b&gt; to get started " VassalVersion="3.7.30" description="Epic &amp; Grand Battles" name="Commands &amp; Colors: Napoleonics Epic &amp; Grand Battles" nextPieceSlotId="4610" version="4.0.7a06">
+<VASSAL.build.GameModule ModuleOther1="&lt;br&gt;by Mark Benson from prior module by Michel Dippel&lt;br&gt;Core game images (c) GMT Games LLC." ModuleOther2="&lt;br&gt;See &lt;b&gt;Help &amp;gt; Module Hints &amp; Tips&lt;/b&gt; to get started " VassalVersion="3.7.30" description="Epic &amp; Grand Battles" name="Commands &amp; Colors: Napoleonics Epic &amp; Grand Battles" nextPieceSlotId="4610" version="4.0.7">
     <VASSAL.build.module.BasicCommandEncoder/>
     <VASSAL.build.module.folder.ModuleSubFolder desc="Change entries by version; GitHub issues: github.com/RiverWanderer-Vassal/ccnapoleonicsEpic/issues" name="Change Log">
         <VASSAL.build.module.folder.ModuleSubFolder desc="" name="4.0.5">
@@ -70,6 +70,7 @@
             <VASSAL.build.module.folder.ModuleSubFolder desc="" name="a04 #36 Leaders of Honor: v5.1 short names (Dupont, Joseph, Saint-Cyr, Victor, Orange, Barclay, Liechtenstein, A / M) and Friedrich-Wilhelm; Dokhturov kept; lists re-sorted; list sizes as standard v4.2.11"/>
             <VASSAL.build.module.folder.ModuleSubFolder desc="" name="a05 Welcome message rewritten: Scenario Options before start, Join Game, Deal Cards, Tactician allocation, hints, Help menu and Charts button"/>
             <VASSAL.build.module.folder.ModuleSubFolder desc="" name="a06 #36 Leaders of Honor tab moved from the top row to Special &gt; Unofficial &gt; Leaders of Honor (six nation panels unchanged)"/>
+            <VASSAL.build.module.folder.ModuleSubFolder desc="" name="4.0.7 release: 4.0.7a06 as tested; 2026 charts (#32), leader art (#45), Sand Quarry 2016 page (#33), Leaders of Honor (#36), welcome message"/>
         </VASSAL.build.module.folder.ModuleSubFolder>
     </VASSAL.build.module.folder.ModuleSubFolder>
     <VASSAL.build.module.Documentation>
